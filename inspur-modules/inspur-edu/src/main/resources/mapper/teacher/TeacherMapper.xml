@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inspur.edu.mapper.TeacherMapper">
+    <resultMap id="TeacherResult" type="Teacher">
+        <result property="id" column="id"></result>
+        <result property="name" column="name"></result>
+        <result property="intro" column="intro"></result>
+        <result property="career" column="career"></result>
+        <result property="level" column="level"></result>
+        <result property="avatar" column="avatar"></result>
+        <result property="sort" column="sort"></result>
+        <result property="isDeleted" column="is_deleted"></result>
+        <result property="gmtCreate" column="gmt_create"></result>
+        <result property="gmtModified" column="gmt_modified"></result>
+    </resultMap>
+
+    <sql id="selectTeacherVo">
+        select id,name,intro,career,level,avatar,sort,gmt_create,gmt_modified from edu_teacher
+    </sql>
+    <select id="selectTeacherList" parameterType="Teacher" resultMap="TeacherResult">
+        <include refid="selectTeacherVo"></include>
+        <where>
+            <if test="id != null and id != ''">and id = #{id}</if>
+                <if test="name != null and name != ''">and `name` like concat('%', #{name}, '%')</if>
+            <if test="level != null">and `level` = #{level}</if>
+            <if test="gmtCreate != null">and gmt_create &gt;= #{gmtCreate}</if>
+            <if test="gmtModified != null">and gmt_modified &lt;= #{gmtModified}</if>
+        </where>
+    </select>
+
+    <insert id="insertTeacher" parameterType="Teacher">
+        insert into edu_teacher
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            <if test="name != null and name != ''">`name`,</if>
+            <if test="intro != null and intro != ''">intro,</if>
+            <if test="career != null and career != ''">career,</if>
+            <if test="level != null">`level`,</if>
+            <if test="avatar != null and avatar != ''">avatar,</if>
+            <if test="sort != null">sort,</if>
+            gmt_create,
+            gmt_modified,
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{id},
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="intro != null and intro != ''">#{intro},</if>
+            <if test="career != null and career != ''">#{career},</if>
+            <if test="level != null">#{level},</if>
+            <if test="avatar != null and avatar != ''">#{avatar},</if>
+            <if test="sort != null">#{sort},</if>
+            #{gmtCreate},
+           #{gmtModified},
+        </trim>
+    </insert>
+</mapper>

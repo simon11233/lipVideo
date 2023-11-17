@@ -1,0 +1,10 @@
+10:26:29.608 [main] INFO  MybatisPlusApplicationTest - [logStartupProfileInfo,655] - The following profiles are active: dev
+10:26:31.685 [main] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+10:26:32.075 [main] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+10:26:33.174 [main] INFO  c.a.c.s.SentinelWebMvcConfigurer - [addInterceptors,52] - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+10:26:42.922 [main] INFO  MybatisPlusApplicationTest - [logStarted,61] - Started MybatisPlusApplicationTest in 29.183 seconds (JVM running for 30.332)
+10:26:42.929 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=inspur-system-dev.yml, group=DEFAULT_GROUP
+10:26:42.930 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=inspur-system, group=DEFAULT_GROUP
+10:26:42.931 [main] INFO  c.a.c.n.r.NacosContextRefresher - [registerNacosListenersForApplications,105] - listening config: dataId=inspur-system.yml, group=DEFAULT_GROUP
+10:26:50.252 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - [close,350] - HikariPool-1 - Shutdown initiated...
+10:26:50.269 [SpringContextShutdownHook] INFO  c.z.h.HikariDataSource - [close,352] - HikariPool-1 - Shutdown completed.

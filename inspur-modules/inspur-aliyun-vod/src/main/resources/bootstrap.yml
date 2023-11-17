@@ -1,0 +1,34 @@
+# Tomcat
+server:
+  port: 9206
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: inspur-aliyun-vod
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+
+aliyun.vod.file:
+  keyid: LTAI5tEUs31wUpgVujdLCFmw
+  keysecret: sRSuMGmjWgcCOj6gae4igIUIdIKlz2

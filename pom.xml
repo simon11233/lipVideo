@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.inspur</groupId>
+    <artifactId>inspur</artifactId>
+    <version>1.0.1</version>
+
+    <packaging>pom</packaging>
+
+    <name>Inspur.Demo</name>
+    <description>微服务DEMO</description>
+    <properties>
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot-version>2.2.1.RELEASE</spring-boot-version>
+        <spring-cloud-alibaba.version>0.2.2.RELEASE</spring-cloud-alibaba.version>
+        <mysql.version>8.0.27</mysql.version>
+        <jodatime.version>2.10.1</jodatime.version>
+        <lombok.version>1.18.8</lombok.version>
+        <mybatis-plus.version>3.1.2</mybatis-plus.version>
+        <pagehelper.boot.version>1.4.6</pagehelper.boot.version>
+        <fastjson.version>2.0.25</fastjson.version>
+        <swagger.version>2.9.2</swagger.version>
+        <aliyun.oss.version>3.10.2</aliyun.oss.version>
+        <jodatime.version>2.10.13</jodatime.version>
+        <poi.version>3.17</poi.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
+        <commons-io.version>2.6</commons-io.version>
+        <httpclient.version>4.5.1</httpclient.version>
+        <jwt.version>0.9.1</jwt.version>
+        <aliyun-java-sdk-core.version>4.4.4</aliyun-java-sdk-core.version>
+        <aliyun-sdk-oss.version>3.10.2</aliyun-sdk-oss.version>
+        <aliyun-java-sdk-vod.version>2.15.2</aliyun-java-sdk-vod.version>
+        <aliyun-java-vod-upload.version>1.4.11</aliyun-java-vod-upload.version>
+        <aliyun-sdk-vod-upload.version>1.4.11</aliyun-sdk-vod-upload.version>
+        <gson.version>2.8.5</gson.version>
+        <json.version>20170516</json.version>
+        <commons-dbutils.version>1.7</commons-dbutils.version>
+        <canal.client.version>1.1.0</canal.client.version>
+        <docker.image.prefix>zx</docker.image.prefix>
+    </properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${jodatime.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring-boot-version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+         <!--swagger ui-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <!--aliyunOSS-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyun-sdk-oss.version}</version>
+            <type>pom</type>
+        </dependency>
+
+        <!--日期时间工具-->
+        <dependency>
+             <groupId>joda-time</groupId>
+             <artifactId>joda-time</artifactId>
+            <version>${jodatime.version}</version>
+            <type>pom</type>
+        </dependency>
+
+         <!--xls-->
+        <dependency>
+             <groupId>org.apache.poi</groupId>
+             <artifactId>poi</artifactId>
+             <version>${poi.version}</version>
+        </dependency>
+         <!--xlsx-->
+        <dependency>
+             <groupId>org.apache.poi</groupId>
+             <artifactId>poi-ooxml</artifactId>
+             <version>${poi.version}</version>
+        </dependency>
+
+         <!--文件上传-->
+        <dependency>
+             <groupId>commons-fileupload</groupId>
+             <artifactId>commons-fileupload</artifactId>
+             <version>${commons-fileupload.version}</version>
+        </dependency>
+
+         <!--commons-io-->
+         <dependency>
+             <groupId>commons-io</groupId>
+             <artifactId>commons-io</artifactId>
+             <version>${commons-io.version}</version>
+         </dependency>
+
+         <!--httpclient-->
+         <dependency>
+             <groupId>org.apache.httpcomponents</groupId>
+             <artifactId>httpclient</artifactId>
+             <version>${httpclient.version}</version>
+         </dependency>
+
+         <dependency>
+             <groupId>com.google.code.gson</groupId>
+             <artifactId>gson</artifactId>
+             <version>${gson.version}</version>
+         </dependency>
+
+         <!-- JWT -->
+         <dependency>
+             <groupId>io.jsonwebtoken</groupId>
+             <artifactId>jjwt</artifactId>
+             <version>${jwt.version}</version>
+         </dependency>
+
+         <!--aliyun-->
+         <dependency>
+             <groupId>com.aliyun</groupId>
+             <artifactId>aliyun-java-sdk-core</artifactId>
+             <version>${aliyun-java-sdk-core.version}</version>
+         </dependency>
+         <dependency>
+             <groupId>com.aliyun.oss</groupId>
+             <artifactId>aliyun-sdk-oss</artifactId>
+             <version>${aliyun-sdk-oss.version}</version>
+         </dependency>
+<!--         <dependency>-->
+<!--             <groupId>com.aliyun</groupId>-->
+<!--             <artifactId>aliyun-java-sdk-vod</artifactId>-->
+<!--             <version>2.15.2</version>-->
+<!--             <type>pom</type>-->
+<!--         </dependency>-->
+<!--         <dependency>-->
+<!--             <groupId>com.aliyun</groupId>-->
+<!--             <artifactId>aliyun-java-vod-upload</artifactId>-->
+<!--             <version>${aliyun-java-vod-upload.version}</version>-->
+<!--         </dependency>-->
+<!--         <dependency>-->
+<!--             <groupId>com.aliyun</groupId>-->
+<!--             <artifactId>aliyun-sdk-vod-upload</artifactId>-->
+<!--             <version>${aliyun-sdk-vod-upload.version}</version>-->
+<!--         </dependency>-->
+         <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>fastjson</artifactId>
+             <version>${fastjson.version}</version>
+         </dependency>
+<!--         <dependency>-->
+<!--             <groupId>org.json</groupId>-->
+<!--             <artifactId>json</artifactId>-->
+<!--             <version>${json.version}</version>-->
+<!--         </dependency>-->
+
+<!--         <dependency>-->
+<!--             <groupId>commons-dbutils</groupId>-->
+<!--             <artifactId>commons-dbutils</artifactId>-->
+<!--             <version>${commons-dbutils.version}</version>-->
+<!--         </dependency>-->
+
+<!--         <dependency>-->
+<!--             <groupId>com.alibaba.otter</groupId>-->
+<!--             <artifactId>canal.client</artifactId>-->
+<!--             <version>${canal.client.version}</version>-->
+<!--         </dependency>-->
+        <!-- pagehelper 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Hoxton.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!-- SpringCloud Alibaba 微服务 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+            <version>2.2.1.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+<modules>
+    <module>inspur-modules</module>
+    <module>inspur-common</module>
+    <module>canal-client</module>
+    <module>inspur-gateway</module>
+</modules>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+                <version>3.8.0</version>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <url>https://maven.aliyun.com/repository/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

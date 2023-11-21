@@ -12,7 +12,6 @@
     <artifactId>inspur-modules</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>inspur-system</module>
         <module>inspur-edu</module>
         <module>inspur-aliyun-oss</module>
         <module>inspur-aliyun-vod</module>
@@ -22,8 +21,5 @@
         <module>inspur-statistics</module>
         <module>inspur-acl</module>
     </modules>
-    <dependencies>
-
-    </dependencies>
 
 </project>

@@ -19,12 +19,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.inspur</groupId>
-            <artifactId>inspur-common</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>

@@ -16,4 +16,5 @@
         <module>inspur-common-swagger</module>
         <module>inspur-common-security</module>
     </modules>
+
 </project>

@@ -31,7 +31,7 @@
         </dependency>
         <dependency>
             <groupId>com.inspur</groupId>
-            <artifactId>Inspur-common-core</artifactId>
+            <artifactId>inspur-common-core</artifactId>
             <version>1.0.1</version>
             <scope>compile</scope>
         </dependency>

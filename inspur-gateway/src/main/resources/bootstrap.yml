@@ -9,41 +9,42 @@ spring:
     name: inspur-gateway
   profiles:
     # 环境配置
-    active: dev
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: inspur-acl
-          uri: lb://inspur-acl
-          predicates:
-          - Path=/*/acl/** # 路径匹配
-        - id: inspur-edu
-          uri: lb://inspur-edu
-          predicates:
-          - Path=/edu/** # 路径匹配
-        - id: inspur-ucenter
-          uri: lb://inspur-ucenter
-          predicates:
-          - Path=/ucenter/** # 路径匹配
-        - id: inspur-aliyun-oss
-          uri: lb://inspur-aliyun-oss
-          predicates:
-          - Path=/oss/** # 路径匹配
-        - id: inspur-aliyun-vod
-          uri: lb://inspur-aliyun-vod
-          predicates:
-          - Path=/vod/** # 路径匹配
-        - id: inspur-cms
-          uri: lb://inspur-cms
-          predicates:
-          - Path=/cms/** # 路径匹配
-    nacos:
-      discovery:
+    active: ${env}
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: inspur-acl
+#          uri: lb://inspur-acl
+#          predicates:
+#          - Path=/*/acl/** # 路径匹配
+#        - id: inspur-edu
+#          uri: lb://inspur-edu
+#          predicates:
+#          - Path=/edu/** # 路径匹配
+#        - id: inspur-ucenter
+#          uri: lb://inspur-ucenter
+#          predicates:
+#          - Path=/ucenter/** # 路径匹配
+#        - id: inspur-aliyun-oss
+#          uri: lb://inspur-aliyun-oss
+#          predicates:
+#          - Path=/oss/** # 路径匹配
+#        - id: inspur-aliyun-vod
+#          uri: lb://inspur-aliyun-vod
+#          predicates:
+#          - Path=/vod/** # 路径匹配
+#        - id: inspur-cms
+#          uri: lb://inspur-cms
+#          predicates:
+#          - Path=/cms/** # 路径匹配
+    #nacos:
+      #discovery:
         # 服务注册地址
-        server-addr: 106.14.137.153:8848
+        #server-addr: 127.0.0.1:8848
+        #server-addr: 106.14.137.153:8848
 
 
 

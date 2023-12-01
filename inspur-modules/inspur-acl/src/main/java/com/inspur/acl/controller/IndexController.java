@@ -5,18 +5,20 @@ import com.inspur.acl.entity.Permission;
 import com.inspur.acl.service.IndexService;
 import com.inspur.acl.service.PermissionService;
 import com.inspur.core.domain.R;
+import com.inspur.core.web.controller.BaseController;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequestMapping("/admin/acl/index")
 //@CrossOrigin
-public class IndexController {
+public class IndexController extends BaseController {
 
     @Autowired
     private IndexService indexService;

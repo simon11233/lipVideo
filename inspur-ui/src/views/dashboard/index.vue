@@ -2,6 +2,7 @@
   <div class="dashboard-container">
     <div class="dashboard-text">用户名:{{ name }}</div>
     <div class="dashboard-text">用户角色:<span v-for="role in roles" :key="role">{{ role }}</span></div>
+    <el-button @click="to">授权</el-button>
   </div>
 </template>
 
@@ -15,6 +16,13 @@ export default {
       'name',
       'roles'
     ])
+  },
+  methods:{
+    to(){
+      this.$router.push({
+        path: "",
+      })
+    }
   }
 }
 </script>

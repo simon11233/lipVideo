@@ -15,7 +15,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 @Service
 public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> implements ChapterService {
@@ -24,6 +28,7 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
     private VideoService videoService;
     @Autowired
     private VodClient vodClient;
+
     @Override
     public List<ChapterVo> nestedList(String courseId) {
         //最终要的到的数据列表
@@ -38,7 +43,6 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
         queryWrapper2.eq("course_id", courseId);
         queryWrapper2.orderByAsc("sort", "id");
         List<Video> videos = videoService.list(queryWrapper2);
-
         //填充章节vo数据
         int count1 = chapters.size();
         for(int i = 0; i < count1; i++){
@@ -48,7 +52,6 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
             ChapterVo chapterVo = new ChapterVo();
             BeanUtils.copyProperties(chapter,chapterVo);
             chapterVoArrayList.add(chapterVo);
-
             ArrayList<VideoVo> videoVoArrayList = new ArrayList<>();
             int count2 = videos.size();
             for(int j=0; j < count2; j++){

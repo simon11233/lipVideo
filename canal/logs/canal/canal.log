@@ -1,5 +1,0 @@
-2023-11-10 18:25:09.507 [main] INFO  com.alibaba.otter.canal.deployer.CanalLauncher - ## set default uncaught exception handler
-2023-11-10 18:25:09.516 [main] INFO  com.alibaba.otter.canal.deployer.CanalLauncher - ## load canal configurations
-2023-11-10 18:25:09.530 [main] INFO  com.alibaba.otter.canal.deployer.CanalStarter - ## start the canal server.
-2023-11-10 18:25:10.163 [main] INFO  com.alibaba.otter.canal.deployer.CanalController - ## start the canal server[192.168.1.9(192.168.1.9):11111]
-2023-11-10 18:25:12.147 [main] INFO  com.alibaba.otter.canal.deployer.CanalStarter - ## the canal server is running now ......

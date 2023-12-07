@@ -8,35 +8,35 @@ spring:
     # 应用名称
     name: inspur-gateway
   cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: inspur-acl
-          uri: lb://inspur-acl
-          predicates:
-          - Path=/*/acl/** # 路径匹配
-        - id: inspur-edu
-          uri: lb://inspur-edu
-          predicates:
-          - Path=/edu/** # 路径匹配
-        - id: inspur-ucenter
-          uri: lb://inspur-ucenter
-          predicates:
-          - Path=/ucenter/** # 路径匹配
-        - id: inspur-aliyun-oss
-          uri: lb://inspur-aliyun-oss
-          predicates:
-          - Path=/oss/** # 路径匹配
-        - id: inspur-aliyun-vod
-          uri: lb://inspur-aliyun-vod
-          predicates:
-          - Path=/vod/** # 路径匹配
-        - id: inspur-cms
-          uri: lb://inspur-cms
-          predicates:
-          - Path=/cms/** # 路径匹配
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: inspur-acl
+#          uri: lb://inspur-acl
+#          predicates:
+#          - Path=/*/acl/** # 路径匹配
+#        - id: inspur-edu
+#          uri: lb://inspur-edu
+#          predicates:
+#          - Path=/edu/** # 路径匹配
+#        - id: inspur-ucenter
+#          uri: lb://inspur-ucenter
+#          predicates:
+#          - Path=/ucenter/** # 路径匹配
+#        - id: inspur-aliyun-oss
+#          uri: lb://inspur-aliyun-oss
+#          predicates:
+#          - Path=/oss/** # 路径匹配
+#        - id: inspur-aliyun-vod
+#          uri: lb://inspur-aliyun-vod
+#          predicates:
+#          - Path=/vod/** # 路径匹配
+#        - id: inspur-cms
+#          uri: lb://inspur-cms
+#          predicates:
+#          - Path=/cms/** # 路径匹配
     nacos:
       discovery:
         # 服务注册地址

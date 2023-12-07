@@ -218,6 +218,7 @@
                     <include>**/application*.yml</include>
                     <include>**/bootstrap.yml</include>
                     <include>**/bootstrap-${env}.yml</include>
+                    <include>**/*.xml</include>
                 </includes>
                 <filtering>true</filtering>
             </resource>

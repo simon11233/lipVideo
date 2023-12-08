@@ -39,7 +39,7 @@
     name:'import',
     data(){
       return{
-        BASE_API:'http://127.0.0.1:9204/edu/subject/addSubject',
+        BASE_API:'/edu/subject/addSubject',
         OSS_PATH:'https://inspur-file.oss-cn-beijing.aliyuncs.com/avatar/2023/09/25/%E8%AF%BE%E7%A8%8B%E5%88%86%E7%B1%BB%E5%88%97%E8%A1%A8%E6%A8%A1%E6%9D%BF.xlsx',
         fileUploadBtnText:'上传文件',
         importBtnDisable:false,

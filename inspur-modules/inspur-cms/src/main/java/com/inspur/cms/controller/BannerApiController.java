@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/cms/banner")
+@RequestMapping("/edu/cms/banner")
 public class BannerApiController {
 
     @Autowired

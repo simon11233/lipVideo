@@ -125,7 +125,7 @@ import { removeById as remove} from "@/api/vod";
           videoOriginalName:''
         },
         fileList:[],
-        BASE_API:'http://localhost:9206/vod/video/upload',
+        BASE_API:'/vod/video/upload',
       }
     },
     created() {

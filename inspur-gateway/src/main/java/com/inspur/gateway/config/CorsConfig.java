@@ -14,9 +14,8 @@ public class CorsConfig {
     public CorsWebFilter corsWebFilter(){
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedMethod("*");
-        config.addAllowedOrigin("*");
+        config.addAllowedOrigin("http://106.14.137.153:81");
         config.addAllowedHeader("*");
-
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());
         source.registerCorsConfiguration("/**", config);
         return new CorsWebFilter(source);

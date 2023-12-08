@@ -37,6 +37,10 @@ spring:
           uri: lb://inspur-cms
           predicates:
           - Path=/cms/** # 路径匹配
+        - id: inspur-statistics
+          uri: lb://inspur-statistics
+          predicates:
+            - Path=/statistics/** # 路径匹配
     nacos:
       discovery:
         # 服务注册地址

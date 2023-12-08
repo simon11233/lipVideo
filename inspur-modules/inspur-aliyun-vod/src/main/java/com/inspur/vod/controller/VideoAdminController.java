@@ -22,7 +22,7 @@ import java.util.List;
 @RefreshScope
 @CrossOrigin
 @RestController
-@RequestMapping("/vod/video")
+@RequestMapping("/admin/vod/video")
 public class VideoAdminController {
     @Autowired
     private VideoService videoService;

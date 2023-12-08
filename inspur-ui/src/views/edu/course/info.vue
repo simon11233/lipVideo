@@ -18,7 +18,7 @@
           </el-option>
         </el-select>
         <el-select v-model="courseInfo.subjectId">
-          <el-option v-for="subject in subSubjectList" :key="subject.id" :label="subject.title" :value="subject.id" />
+          <el-option v-for="subject in subSubjectList" :key="subject.value" :label="subject.title" :value="subject.id" />
         </el-select>
       </el-form-item>
       <el-form-item label="教师" prop="teacherId">
@@ -79,7 +79,7 @@ import { Message } from 'element-ui'
         subjectNestedList: [],//一级分类列表
         subSubjectList: [], //二级分类列表
         saveBtnDisabled:false,
-        BASE_URL: 'http://localhost:9205/oss/file/upload?host=cover',
+        BASE_URL: '/oss/file/upload?host=cover',
         infoRules: {
           title:[{required: true, message: '请输入课程标题'}],
           subjectId:[{required: true, message: '请选择课程分类'}],
@@ -113,6 +113,7 @@ import { Message } from 'element-ui'
             }
         })
         this.subSubjectList = list
+        this.courseInfo.subjectId = ''
       },
       handleAvatarSuccess(res,file){
         console.log(res)

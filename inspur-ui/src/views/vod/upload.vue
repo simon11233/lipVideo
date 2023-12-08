@@ -42,7 +42,7 @@ export default {
         videoOriginalName:''
       },
       fileList:[],
-      BASE_API:'http://localhost:9206/vod/video/upload',
+      BASE_API:'/vod/video/upload',
       dialogVideoFormVisible:false
     }
   },

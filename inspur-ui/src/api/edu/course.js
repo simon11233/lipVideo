@@ -4,7 +4,7 @@ import request from '@/utils/request'
 
 export function saveCourseInfo(courseInfo){
     return  request({
-      url:api_name+"/save",
+      url:`${api_name}/save`,
       method: 'POST',
       data: courseInfo
     })

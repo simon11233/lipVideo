@@ -1,10 +1,10 @@
 import request from '@/utils/request'
-
+const api_name = "/admin/acl"
 // 登录
 export function login(username, password) {
  // debugger
   return request({
-    url: '/admin/acl/login',
+    url: `${api_name}/login`,
     method: 'post',
     data: {
       username,
@@ -16,7 +16,7 @@ export function login(username, password) {
 // 获取用户信息
 export function getInfo(token) {
   return request({
-    url: '/admin/acl/index/info',
+    url: `${api_name}/index/info`,
     method: 'get',
     params: { token }
   })
@@ -26,7 +26,7 @@ export function getInfo(token) {
 export function logout() {
   //debugger
   return request({
-    url: '/admin/acl/index/logout',
+    url: `${api_name}/index/logout`,
     method: 'post'
   })
 }
@@ -34,7 +34,7 @@ export function logout() {
 // 获取菜单权限数据
 export function getMenu() {
   return request({
-    url: '/admin/acl/index/menu',
+    url: `${api_name}/index/menu`,
     method: 'get'
   })
 }

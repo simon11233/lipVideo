@@ -1,8 +1,3 @@
-# Tomcat
-server:
-  port: 8222
-
-# Spring
 spring:
   application:
     # 应用名称
@@ -20,7 +15,7 @@ spring:
         - id: inspur-edu
           uri: lb://inspur-edu
           predicates:
-          - Path=/*/edu/** # 路径匹配
+          - Path=/edu/** # 路径匹配
         - id: inspur-ucenter
           uri: lb://inspur-ucenter
           predicates:
@@ -41,10 +36,3 @@ spring:
       discovery:
         # 服务注册地址
         server-addr: 47.101.148.124:8848
-
-
-
-
-
-
-

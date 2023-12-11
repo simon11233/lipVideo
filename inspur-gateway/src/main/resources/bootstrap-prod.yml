@@ -20,7 +20,7 @@ spring:
         - id: inspur-edu
           uri: lb://inspur-edu
           predicates:
-          - Path=/*/edu/** # 路径匹配
+          - Path=/edu/** # 路径匹配
         - id: inspur-ucenter
           uri: lb://inspur-ucenter
           predicates:

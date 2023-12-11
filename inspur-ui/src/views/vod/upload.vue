@@ -12,7 +12,6 @@
           :limit="1"
           class="upload-demo">
           <el-button size="small" type="primary">上传视频</el-button>
-          <el-button size="small" type="primary" @click="remove">上传视频</el-button>
           <el-tooltip placement="right-end">
             <div slot="content">最大支持1G，<br>
               支持3GP、ASF、AVI、DAT、DV、FLV、F4V、<br>
@@ -67,7 +66,6 @@ export default {
     },
     editVideo(videoId){
       this.dialogVideoFormVisible = true
-
     }
   }
 }

@@ -18,7 +18,7 @@
           </el-option>
         </el-select>
         <el-select v-model="courseInfo.subjectId">
-          <el-option v-for="subject in subSubjectList" :key="subject.value" :label="subject.title" :value="subject.id" />
+          <el-option v-for="subject in subSubjectList" :key="subject.id" :label="subject.title" :value="subject.id" />
         </el-select>
       </el-form-item>
       <el-form-item label="教师" prop="teacherId">
@@ -100,6 +100,11 @@ import { Message } from 'element-ui'
       loadData(){
         getNestedTreeList().then(res=>{
           this.subjectNestedList = res.data.items
+            for (let i = 0; i < this.subjectNestedList.length; i++) {
+              if (this.subjectNestedList[i].id === this.courseInfo.subjectParentId) {
+                this.subSubjectList = this.subjectNestedList[i].children
+              }
+            }
         })
         getList().then(res=>{
           this.teacherList = res.data.rows

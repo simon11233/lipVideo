@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Objects;
 
 @RestController
-@CrossOrigin
-@RequestMapping("/edu/banner")
+@RequestMapping("/cms/banner")
 public class CrmBannerController {
 
     @Autowired

@@ -1,4 +1,4 @@
-const api_name = "/edu/banner"
+const api_name = "/cms/banner"
 import request from '@/utils/request'
 
 export function getPage(page, limit){

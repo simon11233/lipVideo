@@ -3,7 +3,7 @@ import request from '@/utils/request'
 export default {
   getMobile(mobile){
     return request({
-      url: `http://localhost:9205/edu/msm/send/${mobile}`,
+      url: `/edu/msm/send/${mobile}`,
       method: 'get'
     })
   },

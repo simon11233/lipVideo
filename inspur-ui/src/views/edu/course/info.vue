@@ -92,6 +92,11 @@ import { Message } from 'element-ui'
           const id = this.$route.params.id
         getById(id).then(res=>{
           this.courseInfo = res.data.item
+          for (let i = 0; i < this.subjectNestedList.length; i++) {
+            if (this.subjectNestedList[i].id === this.courseInfo.subjectParentId) {
+              this.subSubjectList = this.subjectNestedList[i].children
+            }
+          }
         })
       }
       this.loadData()
@@ -100,11 +105,6 @@ import { Message } from 'element-ui'
       loadData(){
         getNestedTreeList().then(res=>{
           this.subjectNestedList = res.data.items
-            for (let i = 0; i < this.subjectNestedList.length; i++) {
-              if (this.subjectNestedList[i].id === this.courseInfo.subjectParentId) {
-                this.subSubjectList = this.subjectNestedList[i].children
-              }
-            }
         })
         getList().then(res=>{
           this.teacherList = res.data.rows

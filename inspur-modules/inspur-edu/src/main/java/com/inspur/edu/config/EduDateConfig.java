@@ -10,7 +10,7 @@ import java.util.Date;
  * @author Administrator
  */
 @Component
-public class Dateconfig implements MetaObjectHandler {
+public class EduDateConfig implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         this.setFieldValByName("gmtCreate",new Date(),metaObject);

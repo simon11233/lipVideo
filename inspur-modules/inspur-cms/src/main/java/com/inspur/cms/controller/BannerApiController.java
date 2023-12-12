@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin
-@RequestMapping("/edu/cms/banner")
+@RequestMapping("/cms/")
 public class BannerApiController {
 
     @Autowired

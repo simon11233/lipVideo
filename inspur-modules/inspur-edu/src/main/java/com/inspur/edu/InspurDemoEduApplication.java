@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableDiscoveryClient
 @EnableFeignClients
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.inspur"})
 public class InspurDemoEduApplication {
     public static void main(String[] args) {
         SpringApplication.run(InspurDemoEduApplication.class, args);

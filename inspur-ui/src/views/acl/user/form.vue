@@ -7,7 +7,7 @@
       <el-form-item label="用户昵称">
         <el-input v-model="user.nickName"/>
       </el-form-item>
-     
+
       <el-form-item v-if="!user.id" label="用户密码" prop="password">
         <el-input v-model="user.password"/>
       </el-form-item>
@@ -70,7 +70,6 @@ export default {
 
     // 表单初始化
     init() {
-      debugger
       if (this.$route.params && this.$route.params.id) {
         const id = this.$route.params.id
         this.fetchDataById(id)
@@ -124,8 +123,7 @@ export default {
     // 根据id查询记录
     fetchDataById(id) {
       userApi.getById(id).then(response => {
-        debugger
-        this.user = response.data.item
+        this.user = response.pageData
       })
     }
 

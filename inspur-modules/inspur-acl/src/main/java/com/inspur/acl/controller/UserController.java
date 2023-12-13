@@ -93,7 +93,12 @@ public class UserController {
         Map<String, Object> roleMap = roleService.findRoleByUserId(userId);
         return R.ok().data(roleMap);
     }
-
+    @ApiOperation(value = "根据id获取用户数据")
+    @GetMapping("/get/{userId}")
+    public R get(@PathVariable String userId) {
+        User user = userService.getById(userId);
+        return R.ok().data(user);
+    }
     @ApiOperation(value = "根据用户分配角色")
     @PostMapping("/doAssign")
     public R doAssign(@RequestParam String userId,@RequestParam String[] roleId) {

@@ -4,7 +4,8 @@ import cookie from 'js-cookie'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://106.14.137.153:8222', // edu api 的 base_url
+  //baseURL: 'http://106.14.137.153:8222',
+  baseURL: 'http://localhost:8222',
   timeout: 5000 // 请求超时时间
 })
 service.interceptors.request.use(

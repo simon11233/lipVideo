@@ -31,7 +31,7 @@ spring:
         - id: inspur-cms
           uri: lb://inspur-cms
           predicates:
-          - Path=/*/cms/** # 路径匹配
+          - Path=/cms/** # 路径匹配
         - id: inspur-msm
           uri: lb://inspur-msm
           predicates:

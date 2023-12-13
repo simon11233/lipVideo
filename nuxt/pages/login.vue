@@ -8,8 +8,10 @@
     <div class="sign-up-container">
       <el-form ref="userForm" :model="user" :rules="Rules">
         <el-form-item class="input-prepend restyle" prop="mobile">
-          <el-input type="text" placeholder="手机号" v-model="user.mobile"/>
-          <i class="iconfont icon-phone" />
+          <div>
+            <el-input type="text" placeholder="手机号" v-model="user.mobile"/>
+            <i class="iconfont icon-phone" />
+          </div>
         </el-form-item>
         <el-form-item class="input-prepend" prop="password">
           <div>

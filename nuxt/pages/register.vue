@@ -9,12 +9,16 @@
     <div class="sign-up-container">
       <el-form ref="userForm" :model="param" :rules="Rules">
         <el-form-item class="input-prepend restyle" prop="nickname">
-          <el-input type="text" placeholder="昵称" v-model="param.nickname"/>
-          <i class="iconfont icon-user" />
+          <div>
+            <el-input type="text" placeholder="昵称" v-model="param.nickname"/>
+            <i class="iconfont icon-user" />
+          </div>
         </el-form-item>
         <el-form-item class="input-prepend restyle no-radius" prop="mobile">
-          <el-input type="text" placeholder="手机号" v-model="param.mobile"/>
-          <i class="iconfont icon-phone" />
+          <div>
+            <el-input type="text" placeholder="手机号" v-model="param.mobile"/>
+            <i class="iconfont icon-phone" />
+          </div>
         </el-form-item>
         <el-form-item class="input-prepend restyle no-radius" prop="code">
           <div style="width: 100%;display: block;float: left;position: relative">
@@ -28,8 +32,10 @@
           </div>
         </el-form-item>
         <el-form-item class="input-prepend" prop="password">
-          <el-input type="password" placeholder="设置密码" v-model="param.password" />
-          <i class="iconfont icon-password"/>
+          <div>
+            <el-input type="password" placeholder="设置密码" v-model="param.password" />
+            <i class="iconfont icon-password"/>
+          </div>
         </el-form-item>
         <div class="btn">
           <input type="button" class="sign-up-button" value="注册" @click="submitRegister()" />

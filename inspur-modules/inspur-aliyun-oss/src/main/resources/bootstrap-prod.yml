@@ -26,7 +26,7 @@ spring:
 
 aliyun.oss.file:
   endpoint: oss-cn-beijing.aliyuncs.com
-  keyid: LTAI5t6kM4yWVqL2YBvdHZwJ
-  keysecret: kXQQoDTOEgymkqERbVuyigL6Rn7jgj
-  bucketname: inspur-file
-  filehost: avatar
+  keyid:
+  keysecret:
+  bucketname:
+  filehost:
